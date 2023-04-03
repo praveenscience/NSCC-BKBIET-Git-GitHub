@@ -2,15 +2,15 @@
 
 Here’s an amazing tool called **Typora**.
 
-You may be able to later see this on *YouTube*.
+You may be able to later see this on _YouTube_.
 
 ## Project Description
 
-### Vending Machine
+### Vending Machine: Coca Cola
 
-This Application powers the Vending Machine.
+This Application powers the Vending Machine for the Coca Cola Company.
 
 #### Features
 
-* Can give drinks.
-* Can get payments.
+- Can give drinks.
+- Can get payments.
