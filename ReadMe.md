@@ -9,3 +9,8 @@ You may be able to later see this on *YouTube*.
 ### Vending Machine
 
 This Application powers the Vending Machine.
+
+#### Features
+
+* Can give drinks.
+* Can get payments.
