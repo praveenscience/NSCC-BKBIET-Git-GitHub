@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Huddle landing page</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+      :root {
+        --violet: hsl(257, 40%, 49%);
+        --soft-magenta: hsl(300, 69%, 71%);
+        --white: hsl(0, 0%, 100%);
+        --font-poppins: "Poppins", sans-serif;
+        --font-open-sans: "Open Sans", sans-serif;
+        --font-poppins-400: 400;
+        --font-poppins-600: 600;
+        --font-open-sans-400: 400;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(https://raw.githubusercontent.com/JAValentino/huddle-landing-page/master/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: var(--violet);
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 100vh;
+      }
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        margin: 0 32px;
+        padding: 40px 0;
+      }
+      .header img {
+        width: 200px;
+      }
+      .main-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+      .content-text h1 {
+        color: var(--white);
+        font-family: var(--font-poppins);
+        font-weight: var(--font-poppins-600);
+        font-size: 46px;
+      }
+      .content-text p {
+        color: var(--white);
+        font-family: var(--font-open-sans);
+        font-size: 21.2px;
+        line-height: 1.5;
+      }
+      .content-text a {
+        text-decoration: none;
+        display: inline-block;
+        font-family: var(--font-poppins);
+        font-weight: var(--font-poppins-400);
+        border-radius: 30px;
+        padding: 15px 70px;
+        background-color: var(--white);
+        color: var(--violet);
+        margin-top: 25px;
+        transition: all 0.4 ease;
+        box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+      }
+      .content-text a:hover {
+        background-color: var(--soft-magenta);
+        color: var(--white);
+      }
+      .social-icons {
+        text-align: end;
+        margin-right: 60px;
+      }
+      .social-icons a i {
+        position: relative;
+        color: var(--white);
+        font-size: 18px;
+        transition: all 0.4 ease;
+      }
+      .social-icons a:hover i {
+        color: var(--soft-magenta);
+      }
+      .social-icons a:not(:nth-of-type(1)) {
+        margin-left: 36px;
+      }
+      .social-icons a:nth-of-type(2) {
+        margin-left: 44px;
+      }
+      .social-icons a i::after {
+        position: absolute;
+        content: "";
+        left: -13px;
+        top: -13px;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        border: 2px solid var(--white);
+      }
+      .social-icons a i:hover::after {
+        border-color: var(--soft-magenta);
+      }
+      @media (max-width: 1440px) {
+        .container {
+          max-width: 1350px;
+        }
+        .hero {
+          margin: 0 22px;
+        }
+        .content-image img {
+          padding-top: 65px;
+        }
+        .content-text h1 {
+          font-size: 45px;
+        }
+        .content-text p {
+          font-size: 19px;
+        }
+        .social-icons {
+          margin-right: 20px;
+        }
+      }
+      @media (max-width: 1024px) {
+        .main-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .header img {
+          margin-left: 120px;
+          margin-bottom: -100px;
+        }
+        .content-text h1 {
+          font-size: 30px;
+        }
+        .content-text p {
+          font-size: 20px;
+          padding: 10px 100px;
+        }
+        .social-icons {
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+      @media (max-width: 768px) {
+        .main-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .header img {
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+        .social-icons {
+          text-align: center;
+          margin-top: 50px;
+        }
+        .content-text h1 {
+          line-height: 1.5;
+          font-size: 25px;
+        }
+        .content-text p {
+          padding: 10px 60px;
+        }
+      }
+      @media (max-width: 375px) {
+        body {
+          background-image: url("https://raw.githubusercontent.com/JAValentino/huddle-landing-page/master/images/bg-mobile.svg");
+        }
+        .hero {
+          justify-content: space-between;
+          padding: 25px 0;
+        }
+        .header img {
+          margin-left: 10px;
+          width: 130px;
+        }
+        .content-image img {
+          width: 90%;
+        }
+        .content-text p {
+          font-size: 16px;
+          padding: 10px 15px;
+        }
+        .content-text a {
+          padding: 10px 80px;
+          font-size: 15px;
+        }
+        .social-icons {
+          margin-top: 100px;
+          padding-bottom: 60px;
+        }
+        .social-icons a i {
+          font-size: 15px;
+        }
+        .social-icons a i::after {
+          left: -10px;
+          top: -10px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <header class="header">
+          <img src="https://raw.githubusercontent.com/JAValentino/huddle-landing-page/master/images/logo.svg" alt="logo">
+        </header>
+        <main class="main-content">
+          <div class="content-image">
+            <img src="https://raw.githubusercontent.com/JAValentino/huddle-landing-page/master/images/illustration-mockups.svg" alt="illustration">
+          </div>
+          <div class="content-text">
+            <h1>Build The Community Your Fans Will Love</h1>
+            <p> Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+              Create connections with your users as you engage in genuine discussion. </p>
+            <a href="#">Register</a>
+          </div>
+        </main>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
